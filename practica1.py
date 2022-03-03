@@ -1,4 +1,3 @@
-
 from multiprocessing import Process, BoundedSemaphore
 from random import randint
 from multiprocessing import Manager
@@ -24,7 +23,6 @@ def procesar_minimo(suc): #devuelve el minimo de una lista y su posicion (obvian
                 pos = i
     return (m,pos)
     
-
 def producer(semaforo_e,semaforo_n,buffer,sucesion,ide): #dos semaforos
     for i in range(K):
         semaforo_e.acquire()
