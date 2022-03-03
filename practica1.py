@@ -7,12 +7,12 @@ K = 9 #longitud de las sucesiones
 N = 3  #numero de sucesiones
 
 def sucesion_creciente(): #crea una sucesion de numeros crecientes
-    vec = [0 for i in range(K)]
-    vec[0] = randint(0,7)
-    vec[K-1] = -1
+    suc = [0 for i in range(K)]
+    suc[0] = randint(0,7)
+    suc[K-1] = -1
     for i in range(K-2):
-        vec[i+1] = vec[i] + randint(1,5)
-    return vec
+        suc[i+1] = suc[i] + randint(1,5)
+    return suc
 
 def procesar_minimo(suc): #devuelve el minimo de una lista y su posicion (obviando el -1 final)
     m = max(suc)
